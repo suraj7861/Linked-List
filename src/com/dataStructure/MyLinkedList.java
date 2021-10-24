@@ -1,6 +1,6 @@
 package com.dataStructure;
 
-public class MyLinkedList<K> {
+public class MyLinkedList {
 	// variable declaration
 	Node head;
 	Node tail;
@@ -13,34 +13,36 @@ public class MyLinkedList<K> {
 	}
 
 	// method: add node
-	public void add(K key) {
+	public void add(int key) {
 		Node newNode = new Node(key);
 		if (head == null) {
 			head = newNode;
+			tail = newNode;
 		} else {
-			Node tempNode = head;
-			head = newNode;
-			head.setNext(tempNode);
+			Node temp = head;
+			this.head = newNode;
+			newNode.next = temp;
 		}
 	}
 
 	// method: append node
-	public void append(K key) {
+	public void append(int key) {
 		Node newNode = new Node(key);
-
-		if (tail == null) {
+		if (head == null) {
+			head = newNode;
 			tail = newNode;
 		} else {
-			tail.setNext(newNode);
-			tail = newNode;
+			Node temp = tail;
+			this.tail = newNode;
+			temp.next = newNode;
 		}
 	}
 
-	// method: Insert element
-	public void insert(Node myNode, Node newNode) {
-		Node tempNode = myNode.getNext();
-		myNode.setNext(newNode);
-		newNode.setNext(tempNode);
+	// insert element
+	public void insertNode(Node prevNode, int key) {
+		Node newNode = new Node(key);
+		newNode.next = prevNode.next;
+		prevNode.next = newNode;
 	}
 
 	// method: print node
