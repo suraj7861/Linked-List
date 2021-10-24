@@ -12,16 +12,16 @@ public class MyLinkedList {
 		this.tail = null;
 	}
 	
-	//method: add node
+	// method: add node
 	public void add(int key) {
 		Node newNode = new Node(key);
 		if (head == null) {
 			head = newNode;
-		}
-		else {
-			Node tempNode = head;
-			head = newNode;
-			head.setNext(tempNode);
+			tail = newNode;
+		} else {
+			Node temp = head;
+			this.head = newNode;
+			newNode.next = temp;
 		}
 	}
 	
