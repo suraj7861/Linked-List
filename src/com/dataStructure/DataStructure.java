@@ -32,6 +32,14 @@ public class DataStructure {
 		list.pop();
 		// print node
 		list.printNode();
+		System.out.println("\n--------");
+		// append //UC6
+		list.append(56);
+		list.append(30);
+		list.append(70);
+		list.popLast();
+		// print node
+		list.printNode();
 	}
 
 }

@@ -50,6 +50,18 @@ public class MyLinkedList<K> {
 		return tempNode;
 	}
 
+	public Node popLast() {
+		Node tempNode = head;
+		while (!tempNode.getNext().equals(tail)) {
+			tempNode = tempNode.getNext();
+		}
+		System.out.println(tail);
+		tail = tempNode;
+		tempNode = tempNode.getNext();
+		return tempNode;
+	
+	}
+
 	// method: print node
 	public void printNode() {
 		Node temp = head;
