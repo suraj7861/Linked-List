@@ -5,7 +5,7 @@ public class DataStructure {
 	public static void main(String[] args) {
 		System.out.println("Welcome to linked list program");
 		//create object
-		MyLinkedList list = new MyLinkedList();
+		MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 		//add key 
 		list.add(70);
 		list.add(30);
@@ -19,6 +19,12 @@ public class DataStructure {
 		list.append(70);
 		//print node
 		list.printNode();
+		System.out.println("\n--------");
+		//insert 30
+		list.append(56);
+		list.append(70);
+		list.printNode();
+		
 
 	}
 
