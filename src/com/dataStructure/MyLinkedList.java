@@ -59,7 +59,23 @@ public class MyLinkedList<K> {
 		tail = tempNode;
 		tempNode = tempNode.getNext();
 		return tempNode;
-	
+
+	}
+
+	//method: search element
+	public void searchElement(K key) {
+		Node tempNode = head;
+		boolean flag = false;
+		while (tempNode != null) {
+			if (tempNode.getKey() == key) {
+				System.out.println(key+": Element found in th LinkedList: ");
+				flag = true;
+			}
+			tempNode = tempNode.getNext();
+		}
+		if(flag == false) {
+			System.out.println(key+": Element not found in th LinkedList: " );
+		}
 	}
 
 	// method: print node
