@@ -37,7 +37,8 @@ public class MyLinkedList<K> {
 	}
 
 	// method: Insert element
-	public void insert(Node myNode, Node newNode) {
+	public void insert(Node myNode, K key) {
+		Node newNode = new Node(key);
 		Node tempNode = myNode.getNext();
 		myNode.setNext(newNode);
 		newNode.setNext(tempNode);
@@ -62,21 +63,22 @@ public class MyLinkedList<K> {
 
 	}
 
-	//method: search element
+	// method: search element
 	public void searchElement(K key) {
 		Node tempNode = head;
 		boolean flag = false;
 		while (tempNode != null) {
 			if (tempNode.getKey() == key) {
-				System.out.println(key+": Element found in th LinkedList: ");
+				System.out.println(key + ": Element found in th LinkedList: ");
 				flag = true;
 			}
 			tempNode = tempNode.getNext();
 		}
-		if(flag == false) {
-			System.out.println(key+": Element not found in th LinkedList: " );
+		if (flag == false) {
+			System.out.println(key + ": Element not found in th LinkedList: ");
 		}
 	}
+
 
 	// method: print node
 	public void printNode() {

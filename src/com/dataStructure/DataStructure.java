@@ -24,6 +24,7 @@ public class DataStructure {
 		// insert 30 //UC4
 		list.append(56);
 		list.append(70);
+		list.insert(list.head, 30);
 		list.printNode();
 		System.out.println("\npop first element--------");
 		// pop first element //UC5
@@ -47,6 +48,7 @@ public class DataStructure {
 		list.append(30);
 		list.append(70);
 		list.searchElement(30);
+	
 	}
 
 }
