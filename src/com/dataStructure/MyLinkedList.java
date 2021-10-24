@@ -35,13 +35,13 @@ public class MyLinkedList<K> {
 			tail = newNode;
 		}
 	}
-	
-	//method: Insert element
-    public void insert(Node myNode,Node newNode){
-        Node tempNode=myNode.getNext();
-        myNode.setNext(newNode);
-        newNode.setNext(tempNode);
-    }
+
+	// method: Insert element
+	public void insert(Node myNode, Node newNode) {
+		Node tempNode = myNode.getNext();
+		myNode.setNext(newNode);
+		newNode.setNext(tempNode);
+	}
 
 	// method: print node
 	public void printNode() {
