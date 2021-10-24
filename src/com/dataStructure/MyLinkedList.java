@@ -29,7 +29,7 @@ public class MyLinkedList {
 	public void printNode() {
 		Node temp = head;
 		while (temp.next != null) {
-			System.out.println(temp.key);
+			System.out.print(temp.key+"->");
 			temp = temp.next;
 		}
 		System.out.print(temp.key);

@@ -7,9 +7,9 @@ public class DataStructure {
 		//create object
 		MyLinkedList list = new MyLinkedList();
 		//add key 
-		list.add(56);
-		list.add(30);
 		list.add(70);
+		list.add(30);
+		list.add(56);
 		//print node
 		list.printNode();
 	}
