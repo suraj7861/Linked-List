@@ -1,6 +1,6 @@
 package com.dataStructure;
 
-public class MyLinkedList<K> {
+public class MyLinkedList {
 	// variable declaration
 	Node head;
 	Node tail;
@@ -13,72 +13,72 @@ public class MyLinkedList<K> {
 	}
 
 	// method: add node
-	public void add(K key) {
+	public void add(int key) {
 		Node newNode = new Node(key);
 		if (head == null) {
 			head = newNode;
+			tail = newNode;
 		} else {
-			Node tempNode = head;
-			head = newNode;
-			head.setNext(tempNode);
+			Node temp = head;
+			this.head = newNode;
+			newNode.next = temp;
 		}
 	}
 
 	// method: append node
-	public void append(K key) {
+	public void append(int key) {
 		Node newNode = new Node(key);
-
-		if (tail == null) {
+		if (head == null) {
+			head = newNode;
 			tail = newNode;
 		} else {
-			tail.setNext(newNode);
-			tail = newNode;
+			Node temp = tail;
+			this.tail = newNode;
+			temp.next = newNode;
 		}
 	}
 
-	// method: Insert element
-	public void insert(Node myNode, K key) {
+	// insert element
+	public void insertNode(Node prevNode, int key) {
 		Node newNode = new Node(key);
-		Node tempNode = myNode.getNext();
-		myNode.setNext(newNode);
-		newNode.setNext(tempNode);
+		newNode.next = prevNode.next;
+		prevNode.next = newNode;
 	}
 
-	// method: Pop element
-	public Node pop() {
-		Node tempNode = head;
-		head = head.getNext();
-		return tempNode;
-	}
-
-	public Node popLast() {
-		Node tempNode = head;
-		while (!tempNode.getNext().equals(tail)) {
-			tempNode = tempNode.getNext();
+	// pop first element
+	public void pop() {
+		if (head != null) {
+			Node temp = head;
+			head = head.next;
+			temp = null;
 		}
-		System.out.println(tail);
-		tail = tempNode;
-		tempNode = tempNode.getNext();
-		return tempNode;
+	}
+
+	//// pop Last element
+	public void popLast() {
+		Node temp = head;
+		while (!temp.next.equals(tail)) {
+			temp = temp.next;
+		}
+		tail = temp;
 
 	}
 
-	// method: search element
-	public void searchElement(K key) {
+	public void searchElement(int key) {
 		Node tempNode = head;
 		boolean flag = false;
 		while (tempNode != null) {
 			if (tempNode.getKey() == key) {
-				System.out.println(key + ": Element found in th LinkedList: ");
-				flag = true;
+				System.out.println(key+": elemet found in LinkedList");
+				flag =true;
 			}
 			tempNode = tempNode.getNext();
 		}
-		if (flag == false) {
-			System.out.println(key + ": Element not found in th LinkedList: ");
+		if(flag == false) {
+			System.out.println(key+": elemet not found in LinkedList");
 		}
+	
 	}
-
 
 	// method: print node
 	public void printNode() {
