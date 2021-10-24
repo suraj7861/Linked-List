@@ -1,22 +1,22 @@
 package com.dataStructure;
 
-public class Node<K> {
+public class Node {
 	//variable declaration
-	public K key;
+	public int key;
 	public Node next;
 	
 	//constructor
-	public Node(K key) {
+	public Node(int key) {
 		this.key = key;
 		this.next = null;
 	}
 
 	//getter and setter
-	public K getKey() {
+	public int getKey() {
 		return key;
 	}
 
-	public void setKey(K key) {
+	public void setKey(int key) {
 		this.key = key;
 	}
 
