@@ -64,6 +64,7 @@ public class MyLinkedList {
 
 	}
 
+	//search element
 	public void searchElement(int key) {
 		Node tempNode = head;
 		boolean flag = false;
@@ -79,6 +80,26 @@ public class MyLinkedList {
 		}
 	
 	}
+	
+	//
+    public void deleteElement(int key) {
+        Node tempNode = head;
+        while (tempNode.getNext().getKey() != key) {
+            tempNode = tempNode.getNext();
+        }
+        tempNode.setNext(tempNode.getNext().getNext());
+    }
+    
+    //size of LinkedList
+    public void getSize() {
+        int size = 0;
+        Node tempNode = head;
+        while (tempNode != null) {
+            size++;
+            tempNode = tempNode.getNext();
+        }
+        System.out.println("size of LinkedList is: "+size);
+    }
 
 	// method: print node
 	public void printNode() {

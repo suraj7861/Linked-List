@@ -78,6 +78,18 @@ public class DataStructure {
 		list.insertNode(list.head.getNext(), 40);
 		list.printNode();		
 	}
+	
+	// delete 40
+	public static void delete() {
+		MyLinkedList list = new MyLinkedList();
+		list.add(70);
+		list.add(30);
+		list.add(40);
+		list.add(56);
+		list.deleteElement(40);
+		list.getSize();
+		list.printNode();		
+	}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to linked list program");
@@ -101,5 +113,8 @@ public class DataStructure {
 		System.out.println("\n--------");
 		System.out.println("insert 40 after 30 ");
 		insertElement();
+		System.out.println("\n--------");
+		System.out.println("Delete 40 and show size of LinkedList ");
+		delete();
 	}
 }
