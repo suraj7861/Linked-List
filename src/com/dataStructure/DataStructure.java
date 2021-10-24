@@ -68,6 +68,16 @@ public class DataStructure {
 		System.out.println();
 		list.searchElement(30);
 	}
+	
+	// insert element 40 after 30
+	public static void insertElement() {
+		MyLinkedList list = new MyLinkedList();
+		list.add(70);
+		list.add(30);
+		list.add(56);
+		list.insertNode(list.head.getNext(), 40);
+		list.printNode();		
+	}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to linked list program");
@@ -88,5 +98,8 @@ public class DataStructure {
 		System.out.println("\n--------");
 		System.out.println("search LinkList to find element");
 		searchElement();
+		System.out.println("\n--------");
+		System.out.println("insert 40 after 30 ");
+		insertElement();
 	}
 }
