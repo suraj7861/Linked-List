@@ -1,9 +1,7 @@
 package com.dataStructure;
 
-public class DataStructure {
-
-	public static void main(String[] args) {
-		System.out.println("Welcome to linked list program");
+public class DataStructure<K> {
+	public static void add() {
 		//create object
 		MyLinkedList list = new MyLinkedList();
 		//add key 
@@ -12,7 +10,10 @@ public class DataStructure {
 		list.add(56);
 		//print node
 		list.printNode();
-		System.out.println("\n--------");
+	}
+	public static void append() {
+		//create object
+		MyLinkedList list = new MyLinkedList();
 		//append  
 		list.append(56);
 		list.append(30);
@@ -22,4 +23,12 @@ public class DataStructure {
 
 	}
 
+	public static void main(String[] args) {
+		System.out.println("Welcome to linked list program");
+		System.out.println("Add element");
+		add();
+		System.out.println("\n--------");
+		System.out.println("Append element");
+		append();
+	}
 }

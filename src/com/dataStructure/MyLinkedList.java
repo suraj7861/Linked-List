@@ -17,22 +17,24 @@ public class MyLinkedList {
 		Node newNode = new Node(key);
 		if (head == null) {
 			head = newNode;
+			tail = newNode;
 		} else {
-			Node tempNode = head;
-			head = newNode;
-			head.setNext(tempNode);
+			Node temp = head;
+			this.head = newNode;
+			newNode.next = temp;
 		}
 	}
 
 	// method: append node
 	public void append(int key) {
 		Node newNode = new Node(key);
-
-		if (tail == null) {
+		if (head == null) {
+			head = newNode;
 			tail = newNode;
 		} else {
-			tail.setNext(newNode);
-			tail = newNode;
+			Node temp = tail;
+			this.tail = newNode;
+			temp.next = newNode;
 		}
 	}
 
