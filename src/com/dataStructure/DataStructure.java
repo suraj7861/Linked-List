@@ -12,6 +12,14 @@ public class DataStructure {
 		list.add(56);
 		//print node
 		list.printNode();
+		System.out.println("\n--------");
+		//append  
+		list.append(56);
+		list.append(30);
+		list.append(70);
+		//print node
+		list.printNode();
+
 	}
 
 }

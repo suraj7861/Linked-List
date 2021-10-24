@@ -1,5 +1,4 @@
 package com.dataStructure;
-
 public class MyLinkedList {
 	//variable declaration
 	Node head;
@@ -25,13 +24,26 @@ public class MyLinkedList {
 		}
 	}
 	
+	//method: append node
+    public void append(int key) {
+    	Node newNode = new Node(key);
+        
+        if (tail==null){
+            tail=newNode;
+        }
+        else {
+            tail.setNext(newNode);
+            tail=newNode;
+        }
+    }
+    
 	//method: print node
 	public void printNode() {
 		Node temp = head;
-		while (temp.next != null) {
+		while (temp.getNext() != null) {
 			System.out.print(temp.key+"->");
-			temp = temp.next;
+			temp = temp.getNext();
 		}
-		System.out.print(temp.key);
+		System.out.print(temp.getKey());
 	}
 }
