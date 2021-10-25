@@ -20,7 +20,7 @@ public class MyLinkedList {
 			tail = newNode;
 		} else {
 			Node temp = head;
-			this.head = newNode;
+			head = newNode;
 			newNode.next = temp;
 		}
 	}
@@ -33,7 +33,7 @@ public class MyLinkedList {
 			tail = newNode;
 		} else {
 			Node temp = tail;
-			this.tail = newNode;
+			tail = newNode;
 			temp.next = newNode;
 		}
 	}
