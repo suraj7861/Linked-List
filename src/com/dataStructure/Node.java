@@ -1,9 +1,9 @@
 package com.dataStructure;
 
-public class Node {
+public class Node<E> {
 	//variable declaration
 	public int key;
-	public Node next;
+	public Node<E> next;
 	
 	//constructor
 	public Node(int key) {
@@ -20,11 +20,11 @@ public class Node {
 		this.key = key;
 	}
 
-	public Node getNext() {
+	public Node<E> getNext() {
 		return next;
 	}
 
-	public void setNext(Node next) {
+	public void setNext(Node<E> next) {
 		this.next = next;
 	}
 	
