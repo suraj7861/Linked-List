@@ -3,7 +3,7 @@ package com.dataStructure;
 public class DataStructure {
 	public static void add() {
 		// create object
-		MyLinkedList list = new MyLinkedList();
+		MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 		// add key
 		list.add(70);
 		list.add(30);
@@ -15,7 +15,7 @@ public class DataStructure {
 	// append element in LinkList
 	public static void append() {
 		// create object
-		MyLinkedList list = new MyLinkedList();
+		MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 		// append
 		list.append(56);
 		list.append(30);
@@ -28,7 +28,7 @@ public class DataStructure {
 	// insert node in LinkList
 	public static void insertNode() {
 		// create object
-		MyLinkedList list = new MyLinkedList();
+		MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 		// insert node
 		list.append(56);
 		list.append(70);
@@ -40,7 +40,7 @@ public class DataStructure {
 
 	// delete first element
 	public static void popFirst() {
-		MyLinkedList list = new MyLinkedList();
+		MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 		list.add(70);
 		list.add(30);
 		list.add(56);
@@ -50,7 +50,7 @@ public class DataStructure {
 
 	// delete last element
 	public static void popLast() {
-		MyLinkedList list = new MyLinkedList();
+		MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 		list.add(70);
 		list.add(30);
 		list.add(56);
@@ -60,7 +60,7 @@ public class DataStructure {
 
 	// find element
 	public static void searchElement() {
-		MyLinkedList list = new MyLinkedList();
+		MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 		list.add(70);
 		list.add(30);
 		list.add(56);
@@ -71,7 +71,7 @@ public class DataStructure {
 	
 	// insert element 40 after 30
 	public static void insertElement() {
-		MyLinkedList list = new MyLinkedList();
+		MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 		list.add(70);
 		list.add(30);
 		list.add(56);
@@ -81,7 +81,7 @@ public class DataStructure {
 	
 	// delete 40
 	public static void delete() {
-		MyLinkedList list = new MyLinkedList();
+		MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 		list.add(70);
 		list.add(30);
 		list.add(40);

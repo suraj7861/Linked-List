@@ -1,9 +1,9 @@
 package com.dataStructure;
 
-public class MyLinkedList {
+public class MyLinkedList<E> {
 	// variable declaration
-	Node head;
-	Node tail;
+	Node<E> head;
+	Node<E> tail;
 
 	// constructor
 	public MyLinkedList() {
@@ -14,12 +14,12 @@ public class MyLinkedList {
 
 	// method: add node
 	public void add(int key) {
-		Node newNode = new Node(key);
+		Node<E> newNode = new Node<E>(key);
 		if (head == null) {
 			head = newNode;
 			tail = newNode;
 		} else {
-			Node temp = head;
+			Node<E> temp = head;
 			head = newNode;
 			newNode.next = temp;
 		}
@@ -27,20 +27,20 @@ public class MyLinkedList {
 
 	// method: append node
 	public void append(int key) {
-		Node newNode = new Node(key);
+		Node<E> newNode = new Node<E>(key);
 		if (head == null) {
 			head = newNode;
 			tail = newNode;
 		} else {
-			Node temp = tail;
+			Node<E> temp = tail;
 			tail = newNode;
 			temp.next = newNode;
 		}
 	}
 
 	// insert element
-	public void insertNode(Node prevNode, int key) {
-		Node newNode = new Node(key);
+	public void insertNode(Node<E> prevNode, int key) {
+		Node<E> newNode = new Node<E>(key);
 		newNode.next = prevNode.next;
 		prevNode.next = newNode;
 	}
@@ -48,7 +48,7 @@ public class MyLinkedList {
 	// pop first element
 	public void pop() {
 		if (head != null) {
-			Node temp = head;
+			Node<E> temp = head;
 			head = head.next;
 			temp = null;
 		}
@@ -56,18 +56,17 @@ public class MyLinkedList {
 
 	//// pop Last element
 	public void popLast() {
-		Node temp = head;
+		Node<E> temp = head;
 		while (!temp.next.equals(tail)) {
 			temp = temp.next;
 		}
 		tail = temp;
-		temp.next = null;
 
 	}
 
 	// search element
 	public void searchElement(int key) {
-		Node tempNode = head;
+		Node<E> tempNode = head;
 		boolean flag = false;
 		while (tempNode != null) {
 			if (tempNode.getKey() == key) {
@@ -84,7 +83,7 @@ public class MyLinkedList {
 
 	//
 	public void deleteElement(int key) {
-		Node tempNode = head;
+		Node<E> tempNode = head;
 		while (tempNode.getNext().getKey() != key) {
 			tempNode = tempNode.getNext();
 		}
@@ -94,7 +93,7 @@ public class MyLinkedList {
 	// size of LinkedList
 	public void getSize() {
 		int size = 0;
-		Node tempNode = head;
+		Node<E> tempNode = head;
 		while (tempNode != null) {
 			size++;
 			tempNode = tempNode.getNext();
@@ -104,7 +103,7 @@ public class MyLinkedList {
 
 	// method: print node
 	public void printNode() {
-		Node temp = head;
+		Node<E> temp = head;
 		while (temp.getNext() != null) {
 			System.out.print(temp.key + "->");
 			temp = temp.getNext();
