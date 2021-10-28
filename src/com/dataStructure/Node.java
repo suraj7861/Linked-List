@@ -5,7 +5,7 @@ public class Node<E> {
 	public E key;
 	public Node<E> next;
 	
-	//constructor
+	//constructor with field
 	public Node(E key) {
 		this.key = key;
 		this.next = null;
