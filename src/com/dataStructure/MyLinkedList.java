@@ -13,7 +13,7 @@ public class MyLinkedList<E> {
 	}
 
 	// method: add node
-	public void add(int key) {
+	public void add(E key) {
 		Node<E> newNode = new Node<E>(key);
 		if (head == null) {
 			head = newNode;
@@ -26,7 +26,7 @@ public class MyLinkedList<E> {
 	}
 
 	// method: append node
-	public void append(int key) {
+	public void append(E key) {
 		Node<E> newNode = new Node<E>(key);
 		if (head == null) {
 			head = newNode;
@@ -39,7 +39,7 @@ public class MyLinkedList<E> {
 	}
 
 	// insert element
-	public void insertNode(Node<E> prevNode, int key) {
+	public void insertNode(Node<E> prevNode, E key) {
 		Node<E> newNode = new Node<E>(key);
 		newNode.next = prevNode.next;
 		prevNode.next = newNode;
@@ -64,42 +64,42 @@ public class MyLinkedList<E> {
 
 	}
 
-	// search element
-	public void searchElement(int key) {
+	//search element
+	public void searchElement(E key) {
 		Node<E> tempNode = head;
 		boolean flag = false;
 		while (tempNode != null) {
 			if (tempNode.getKey() == key) {
-				System.out.println(key + ": elemet found in LinkedList");
-				flag = true;
+				System.out.println(key+": elemet found in LinkedList");
+				flag =true;
 			}
 			tempNode = tempNode.getNext();
 		}
-		if (flag == false) {
-			System.out.println(key + ": elemet not found in LinkedList");
+		if(flag == false) {
+			System.out.println(key+": elemet not found in LinkedList");
 		}
-
+	
 	}
-
+	
 	//
-	public void deleteElement(int key) {
-		Node<E> tempNode = head;
-		while (tempNode.getNext().getKey() != key) {
-			tempNode = tempNode.getNext();
-		}
-		tempNode.setNext(tempNode.getNext().getNext());
-	}
-
-	// size of LinkedList
-	public void getSize() {
-		int size = 0;
-		Node<E> tempNode = head;
-		while (tempNode != null) {
-			size++;
-			tempNode = tempNode.getNext();
-		}
-		System.out.println("size of LinkedList is: " + size);
-	}
+    public void deleteElement(E key) {
+        Node<E> tempNode = head;
+        while (tempNode.getNext().getKey() != key) {
+            tempNode = tempNode.getNext();
+        }
+        tempNode.setNext(tempNode.getNext().getNext());
+    }
+    
+    //size of LinkedList
+    public void getSize() {
+        int size = 0;
+        Node<E> tempNode = head;
+        while (tempNode != null) {
+            size++;
+            tempNode = tempNode.getNext();
+        }
+        System.out.println("size of LinkedList is: "+size);
+    }
 
 	// method: print node
 	public void printNode() {
