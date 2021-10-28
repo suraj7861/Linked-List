@@ -13,7 +13,7 @@ public class MyLinkedList<E> {
 	}
 
 	// method: add node
-	public void add(int key) {
+	public void add(E key) {
 		Node<E> newNode = new Node<E>(key);
 		if (head == null) {
 			head = newNode;
@@ -26,7 +26,7 @@ public class MyLinkedList<E> {
 	}
 
 	// method: append node
-	public void append(int key) {
+	public void append(E key) {
 		Node<E> newNode = new Node<E>(key);
 		if (head == null) {
 			head = newNode;
@@ -39,7 +39,7 @@ public class MyLinkedList<E> {
 	}
 
 	// insert element
-	public void insertNode(Node<E> prevNode, int key) {
+	public void insertNode(Node<E> prevNode, E key) {
 		Node<E> newNode = new Node<E>(key);
 		newNode.next = prevNode.next;
 		prevNode.next = newNode;
@@ -65,7 +65,7 @@ public class MyLinkedList<E> {
 	}
 
 	//search element
-	public void searchElement(int key) {
+	public void searchElement(E key) {
 		Node<E> tempNode = head;
 		boolean flag = false;
 		while (tempNode != null) {
@@ -82,7 +82,7 @@ public class MyLinkedList<E> {
 	}
 	
 	//
-    public void deleteElement(int key) {
+    public void deleteElement(E key) {
         Node<E> tempNode = head;
         while (tempNode.getNext().getKey() != key) {
             tempNode = tempNode.getNext();
